@@ -52,6 +52,11 @@ class BottomNavigationDrawerFragment extends BottomSheetDialogFragment {
                         Intent intent2 = new Intent(getActivity(), Contact.class);
                         startActivity(intent2);
                         break;
+                    case R.id.schedule:
+                        Intent intent3 = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent3);
+                        getActivity().finish();
+                        break;
                 }
                 return false;
             }

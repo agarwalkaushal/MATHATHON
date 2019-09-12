@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MATH-A-THON</string>
+    <string name="siam"><b>School of Advanced Science</b> (SAS), a platform for intellectuals in VIT,
+        is pledged to internationally acclaimed research and inventive instruction with a priority on
+        disciplinary rigor and establish academic achievement. SAS comprises three academic departments
+        spanning Mathematics, Physics &amp; Chemistry with faculty strength of 110, 46 &amp; 72 respectively
+        (total 226). The School offers M.Phil and Ph. D. research Programmes in all these disciplines and
+        Master’s Programmes in Mathematics, Physics and Chemistry.\n\n<b>SIAM-VIT</b> aims at dispensing
+        the required tools and knowledge for students to excel in fields
+        of applied mathematics such as computational science, forensics, cryptography etc. It provides a
+        bridge for students to apply the classroom knowledge to real-world applications and push the
+        boundaries of their curriculum to explore their field of interest through projects, research,
+        industrial visits and internships. It is the only chapter in VIT that takes all the branches
+        under its wings and therefore has a huge outreach.
+    </string>
+    <string name="event"><b>Math-a-thon</b> is an educational competition where a team of two to four participants will come up with an idea and proceed to making a fully or partially working prototype based on the idea as they proceed to the next round.
+        The domains provided will fall under the category of Applied Mathematics.</string>
 </resources>
