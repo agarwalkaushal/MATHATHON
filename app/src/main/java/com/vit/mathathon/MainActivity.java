@@ -1,13 +1,18 @@
 package com.vit.mathathon;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -67,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
         day2_layout.setVisibility(View.GONE);
         day3_layout.setVisibility(View.GONE);
 
+        final Animation fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+        final Animation fadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
+
         day1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,9 +84,15 @@ public class MainActivity extends AppCompatActivity {
                 day3.getBackground().setAlpha(64);
                 day2.setTextColor(day2.getTextColors().withAlpha(64));
                 day3.setTextColor(day3.getTextColors().withAlpha(64));
-                day1_layout.setVisibility(View.VISIBLE);
+
+                //day2_layout.startAnimation(fadeOut);
+                //day3_layout.startAnimation(fadeOut);
+
                 day2_layout.setVisibility(View.GONE);
                 day3_layout.setVisibility(View.GONE);
+
+                day1_layout.setVisibility(View.VISIBLE);
+                day1_layout.startAnimation(fadeIn);
             }
         });
 
@@ -91,9 +105,16 @@ public class MainActivity extends AppCompatActivity {
                 day3.getBackground().setAlpha(64);
                 day1.setTextColor(day1.getTextColors().withAlpha(64));
                 day3.setTextColor(day3.getTextColors().withAlpha(64));
+
+                //day1_layout.startAnimation(fadeOut);
+                //day3_layout.startAnimation(fadeOut);
+
                 day1_layout.setVisibility(View.GONE);
-                day2_layout.setVisibility(View.VISIBLE);
                 day3_layout.setVisibility(View.GONE);
+
+                day2_layout.startAnimation(fadeIn);
+                day2_layout.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -106,9 +127,93 @@ public class MainActivity extends AppCompatActivity {
                 day1.getBackground().setAlpha(64);
                 day2.setTextColor(day2.getTextColors().withAlpha(64));
                 day1.setTextColor(day1.getTextColors().withAlpha(64));
+
+                //day2_layout.startAnimation(fadeOut);
+                //day1_layout.startAnimation(fadeOut);
+
                 day1_layout.setVisibility(View.GONE);
                 day2_layout.setVisibility(View.GONE);
+
+                day3_layout.startAnimation(fadeIn);
                 day3_layout.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("All the participants are requested to be on time and complete the pre-event formalities.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
+            }
+        });
+
+        second.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("Inaugration ceremony will take place and Math-a-thon will be declared OPEN! General flow and instructions for the Math-a-Thon will be given.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
+            }
+        });
+
+        third.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("Quiz consisting of 60 questions will be held teamwise.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
+            }
+        });
+
+        fourth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("Results for round 1 will be declared and further instructions will be provided.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
+            }
+        });
+
+        first_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("Review of ideas and implementation is to be taken by faculties.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
+            }
+        });
+
+        first_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("Inspection of the final implementation will be done.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
+            }
+        });
+
+        second_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.myDialog));
+                builder.setMessage("Final results will be declared.");
+                AlertDialog alertdialog = builder.create();
+                alertdialog.show();
             }
         });
 

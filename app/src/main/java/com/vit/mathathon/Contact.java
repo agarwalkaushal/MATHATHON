@@ -31,7 +31,7 @@ public class Contact extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(Intent.ACTION_SENDTO);
                 intent1.setData(Uri.parse("mailto:")); // only email apps should handle this
-                intent1.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"bookbud.help@gmail.com"});
+                intent1.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"siam@vit.ac.in"});
                 if (intent1.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent1);
                 }

@@ -14,7 +14,7 @@ import android.widget.EditText;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.navigation.NavigationView;
 
-class BottomNavigationDrawerFragment extends BottomSheetDialogFragment {
+public class BottomNavigationDrawerFragment extends BottomSheetDialogFragment {
 
 
     NavigationView navigationView;
